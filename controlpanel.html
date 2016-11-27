@@ -3,28 +3,58 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="controlpanel.css">
   	<title>PiStat</title>
+	
 </head>
+
+	<header>
+  	<div class="wrap">
+    	<!-- nav class is added here -->
+		<div class="content nav">
+	  		<!-- Site navigation menu -->
+			<ul class="navbar">
+  				<li><a href="controlpanel.html">Control Panel</a>
+  				<li><a href="log.html">History</a>
+			</ul>
+	  	</div>
+  	</div>
+</header>
 
 <body>
 
-<!-- Site navigation menu -->
-<ul class="navbar">
-  <li><a href="controlpanel.html">Control Panel</a>
-  <li><a href="log.html">History</a>
-</ul>
+
 
 <!-- Main content -->
-<div class="main">
-	<div class="wrap">
-    	<div class="content"></div>
-	  		<div id="container">
-  				<div id="inner">
-    			<div id="notches"></div>
-  				</div>
-			</div>
-			<div id="print"></div>
+<div id='container'>
+    <div id='curtempdisplay'>
+        <p>
+            Current Temp:
+        </p>
+    </div>
+
+	<div id='controls'>
+		
+		
+        <div id = 'tartempdiv'>
+            <p id = 'tartemplabel'>Target Temperature:</p>
+            <p>
+			 <input type='range' min='55' max='90' value='10' id='input_target_temperature' step='1' />
+            </p>
+		</div>
+
+
+        <label><span>State: Off</span>
+            
+        </label>
+
+        <div id = 'miccontrol'>
+            <button id = 'micaccess'>Mic Off</button>
+            <img src = "images/mute.png" alt = "Mute" style="width:25px;height:25px;">
+        </div>
+			
 	</div>
+
 </div>
+
 
 
 
