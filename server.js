@@ -12,10 +12,4 @@ app.get('/',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
-app.listen(3000, '0.0.0.0', (err) => {
-  if (err) {
-    return console.log('something bad happened', err)
-  }
-
-  console.log(`server is listening on ` + 3000)
-});
+app.listen(3000, '0.0.0.0');
