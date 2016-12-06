@@ -2,104 +2,75 @@
 <html>
 <head>
 	<!--- Not sure which of these I need, so I used them all --->
+<<<<<<< HEAD
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script src="../public/js/jquery.knob.js/jquery.knob.js"></script>
-	<!--- Jquery Knob script: --->
-	<script>
-		$(document).ready(function(){
+		$(function($) {
 
-				$(".knob").knob({
-					change : function (value) {
-						//console.log("change : " + value);
-					},
-					release : function (value) {
-						//console.log(this.$.attr('value'));
-						console.log("release : " + value);
-					},
-					cancel : function () {
-						console.log("cancel : ", this);
-					},
-					/*format : function (value) {
-					 return value + '%';
-					 },*/
-					draw : function () {
+                $(".knob").knob({
+                    change: function (value) {
+                        //console.log("change : " + value);
+                    },
+                    release: function (value) {
+                        //console.log(this.$.attr('value'));
+                        console.log("release : " + value);
+                    },
+                    cancel: function () {
+                        console.log("cancel : ", this);
+                    },/*format : function (value) {
+                        return value + '%';
+                    },*/
+                    draw : function () {
 
-						// "tron" case
-						if(this.$.data('skin') == 'tron') {
+                        // "tron" case
+                        if(this.$.data('skin') == 'tron') {
 
-							this.cursorExt = 0.3;
+                            this.cursorExt = 0.3;
 
-							var a = this.arc(this.cv)  // Arc
-									, pa                   // Previous arc
-									, r = 1;
+                            var a = this.arc(this.cv)  // Arc
+                                , pa                   // Previous arc
+                                , r = 1;
 
-							this.g.lineWidth = this.lineWidth;
+                            this.g.lineWidth = this.lineWidth;
 
-							if (this.o.displayPrevious) {
-								pa = this.arc(this.v);
-								this.g.beginPath();
-								this.g.strokeStyle = this.pColor;
-								this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
-								this.g.stroke();
-							}
-
-							this.g.beginPath();
-							this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
-							this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
-							this.g.stroke();
-
-							this.g.lineWidth = 2;
-							this.g.beginPath();
-							this.g.strokeStyle = this.o.fgColor;
-							this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
-							this.g.stroke();
-
-							return false;
-						}
-					}
-				});
-
-            // Example of infinite knob, iPod click wheel -- THIS PART IS NOT USED
-            var v, up=0,down=0,i=0
-                    ,$idir = $("div.idir")
-                    ,$ival = $("div.ival")
-                    ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
-                    ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
-            $("input.infinite").knob(
-                    {
-                        min : 0
-                        , max : 20
-                        , stopper : false
-                        , change : function () {
-                        if(v > this.cv){
-                            if(up){
-                                decr();
-                                up=0;
-                            }else{up=1;down=0;}
-                        } else {
-                            if(v < this.cv){
-                                if(down){
-                                    incr();
-                                    down=0;
-                                }else{down=1;up=0;}
+                            if (this.o.displayPrevious) {
+                                pa = this.arc(this.v);
+                                this.g.beginPath();
+                                this.g.strokeStyle = this.pColor;
+                                this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
+                                this.g.stroke();
                             }
+
+                            this.g.beginPath();
+                            this.g.strokeStyle = r ?this.o.fgColor : this.fgColor ;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
+                            this.g.stroke();
+
+                            this.g.lineWidth = 2;
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.o.fgColor;
+                            this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                            this.g.stroke();
+
+                            return false;
                         }
-                        v = this.cv;
                     }
-                    });
-        });
+
+                });
+		});
     </script>
 	<style>
         body{
-            padding: 0;
-            margin: 0px 50px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            text-rendering: optimizelegibility;
-        }
-        p{font-size: 30px; line-height: 30px}
-        div.demo{text-align: center; width: 280px; float: left}
-        div.demo > p{font-size: 20px}
+			  background: #ffffff url("../images/plain-background.jpg") no-repeat right top;
+              padding: 0;
+              margin: 0px 50px;
+              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              text-rendering: optimizelegibility;
+            }
+            p{font-size: 30px; line-height: 30px}
+            div.demo{text-align: center; width: 400px; height:300px; float: left}
+            div.demo > p{font-size: 20px}
     </style>
   	<title>PiStat</title>
 	
@@ -129,41 +100,34 @@
 		<div class="container">
 
 
-			<!--- JQuery Knob views with inline css copied from Jquery demo --->
-			<div style="display:inline;width:150px;height:200px;">
-				<canvas width="200" height="200">
-					<input class="knob" data-width="200" data-min="-100"
-						   data-displayprevious="true" value="44"
-						   style="width: 104px; height: 66px; position: absolute;
-						   vertical-align: middle; margin-top: 66px;
-						   margin-left: -152px; border: 0px; background: none;
-						   font-style: normal; font-variant: normal; font-weight: bold;
-						   font-stretch: normal; font-size: 40px; line-height: normal;
-						   font-family: Arial; text-align: center; color: rgb(135, 206, 235);
-						   padding: 0px; -webkit-appearance: none;">
-				</canvas>
+			<!--- JQuery Knob html with inline css copied from Jquery demo --->
+			<div class="demo" style="width:100%">
+				<div style="width: 50%;float: left">
+            <p>Current Temperature:</p>
+            <input class="knob" data-width="80%" data-min="55" data-max="90" data-step="1" data-displayPrevious=true value="55">
+
+				</div>
+				<div style="width: 50%;float: right">
+            <p>Target Temperature:</p>
+            <input class="knob" data-width="80%" data-min="55" data-max="90" data-step="1" data-displayPrevious=true value="55">
+
+				</div>
 			</div>
+        	<div style="clear:both"></div>
 
 
 	<div id='controls'>
-		
-		
-        <div id = 'tartempdiv'>
-            <p id = 'tartemplabel'>Target Temperature:</p>
-            <p>
-			 <input type='range' min='55' max='90' value='10' id='input_target_temperature' step='1' />
-            </p>
-		</div>
 
 
-        <label><span>State: Off</span>
-            
-        </label>
 
-        <div id = 'miccontrol'>
-            <button id = 'micaccess'>Mic Off</button>
-            <img src = "../public/assets/images/mute.png" alt = "Mute" style="width:25px;height:25px;">
+        <div id = 'auxcontrols'>
+			<label id = "climatestate"><span>Climate State: Heating</span></label><br>
+            <Label id="doorlabel"><span>Door: Closed</span></Label><br>
+			<Label id="tvlabel"><span>Television: Off</span></Label><br>
+			<Label id="ovenlabel"><span>Oven: Off</span></Label><br>
+			<Label id="microwavelabel"><span>microwave: Off</span></Label><br>
         </div>
+
 			
 	</div>
 
