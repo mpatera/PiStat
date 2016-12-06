@@ -14,5 +14,5 @@ app.listen(3000, "0.0.0.0", (err) => {
     return console.log('something bad happened', err)
   }
 
-  console.log(`server is listening on ${port}`)
+  console.log(`server is listening on ` + 3000)
 });
