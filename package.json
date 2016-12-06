@@ -2,10 +2,10 @@
   "name": "pistat",
   "version": "1.0.0",
   "description": "Raspberry Pi controlling thermostat",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "mocha test",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
