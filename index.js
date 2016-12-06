@@ -4,13 +4,12 @@
 
 const express = require('express');
 const app = express();
-const port = 8080;
 
-app.get('/', (request, response) => {
-  response.send('Hello from Express!')
-});
+// app.get('/', (request, response) => {
+//   response.send('Hello from Express!')
+// });
 
-app.listen(port, '0.0.0.0', (err) => {
+app.listen(3000, "0.0.0.0", (err) => {
   if (err) {
     return console.log('something bad happened', err)
   }
