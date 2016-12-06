@@ -12,7 +12,7 @@ app.get('/',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
-app.listen(3000, '192.168.1.15', (err) => {
+app.listen(3000, '0.0.0.0', (err) => {
   if (err) {
     return console.log('something bad happened', err)
   }
