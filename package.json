@@ -1,0 +1,26 @@
+{
+  "name": "pistat",
+  "version": "1.0.0",
+  "description": "Raspberry Pi controlling thermostat",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/matt.patera1/PiStat.git"
+  },
+  "author": "Matt Patera and Darren Enos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/matt.patera1/PiStat/issues"
+  },
+  "homepage": "https://gitlab.com/matt.patera1/PiStat#README",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
