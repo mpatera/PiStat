@@ -7,7 +7,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use()
+app.use();
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/views/controlpanel.html'));
