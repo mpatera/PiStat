@@ -2,11 +2,14 @@
  * Created by mattpatera on 12/5/16.
  */
 
+
 const express = require('express');
+const path = require('path');
 const app = express();
 
-app.get('/', (request, response) => {
-  response.send('Hello from Express!')
+app.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+  //__dirname : It will resolve to your project folder.
 });
 
 app.listen(3000, '0.0.0.0', (err) => {
