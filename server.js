@@ -7,8 +7,10 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+app.use()
+
 app.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/app/html/controlpanel.html'));
+  res.sendFile(path.join(__dirname+'/views/controlpanel.html'));
   //__dirname : It will resolve to your project folder.
 });
 
