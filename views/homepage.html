@@ -18,45 +18,47 @@
 
         <div class="nav">
             <ul>
-                <li>Temperature</li>
-                <li>Door</li>
+                <li><span id="temp_span">Temperature</span></li>
+                <li><span id="door_span">Door</span></li>
             </ul>
         </div>
     </div>
 </div>
+<div class="content-container">
+    <div class="content">
+        <!--- JQuery Knob html with inline css copied from Jquery demo --->
+        <div class="demo" style="width:100%">
+            <div style="width: 50%;float: left">
+                <p>Current Temperature:</p>
+                <input class="knob" data-width="80%" data-min="55" data-max="90" data-step="1"
+                       data-displayPrevious=true
+                       value="55">
 
-<div class="content">
-    <!--- JQuery Knob html with inline css copied from Jquery demo --->
-    <div class="demo" style="width:100%">
-        <div style="width: 50%;float: left">
-            <p>Current Temperature:</p>
-            <input class="knob" data-width="80%" data-min="55" data-max="90" data-step="1" data-displayPrevious=true
-                   value="55">
+            </div>
+            <div style="width: 50%;float: right">
+                <p>Target Temperature:</p>
+                <input class="knob" data-width="80%" data-min="55" data-max="90" data-step="1"
+                       data-displayPrevious=true
+                       value="55">
 
+            </div>
         </div>
-        <div style="width: 50%;float: right">
-            <p>Target Temperature:</p>
-            <input class="knob" data-width="80%" data-min="55" data-max="90" data-step="1" data-displayPrevious=true
-                   value="55">
+        <div style="clear:both"></div>
 
+
+        <div id='controls'>
+
+
+            <div id='auxcontrols'>
+                <label id="climatestate"><span>Climate State: Heating</span></label><br>
+                <Label id="doorlabel"><span>Door: Closed</span></Label><br>
+                <Label id="tvlabel"><span>Television: Off</span></Label><br>
+                <Label id="ovenlabel"><span>Oven: Off</span></Label><br>
+                <Label id="microwavelabel"><span>microwave: Off</span></Label><br>
+            </div>
         </div>
-    </div>
-    <div style="clear:both"></div>
-
-
-    <div id='controls'>
-
-
-        <div id='auxcontrols'>
-            <label id="climatestate"><span>Climate State: Heating</span></label><br>
-            <Label id="doorlabel"><span>Door: Closed</span></Label><br>
-            <Label id="tvlabel"><span>Television: Off</span></Label><br>
-            <Label id="ovenlabel"><span>Oven: Off</span></Label><br>
-            <Label id="microwavelabel"><span>microwave: Off</span></Label><br>
-        </div>
-
-
     </div>
 </div>
+
 </body>
 </html>
