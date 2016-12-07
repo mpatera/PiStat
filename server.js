@@ -22,7 +22,6 @@ const alert_tool = require('./public/js/alert.js');
 
 app.get('/alert', function (req, res) {
     res.send(alert_tool.send_alarm_sms());
-    console.log("something happened")
 });
 
 app.listen(3000, '0.0.0.0', (err) => {
