@@ -11,6 +11,7 @@ const app = express();
 app.use("/public", express.static('public'));
 app.use("/node_modules", express.static('node_modules'));
 app.use("/views", express.static('views'));
+app.use("/test", express.static('test'));
 
 // Deliver start page on navigation to root
 app.get('/', function (req, res) {
@@ -28,6 +29,10 @@ app.get('/alertSMS', function (req, res) {
 });
 app.get('/alertEmail', function (req, res) {
     res.send(alert_tool_email.send_alarm_email());
+});
+app.get('/test', function (req, res) {
+    res.sendFile(path.join(__dirname + '/test/test.html'));
+    //__dirname : It will resolve to your project folder.
 });
 
 // Server setup
