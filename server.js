@@ -11,15 +11,15 @@ app.use("/public", express.static('public'));
 app.use("/node_modules", express.static('node_modules'));
 
 
-app.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/views/index.html'));
-  //__dirname : It will resolve to your project folder.
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname + '/views/index.html'));
+    //__dirname : It will resolve to your project folder.
 });
 
 app.listen(3000, '0.0.0.0', (err) => {
-  if (err) {
-    return console.log('something bad happened', err)
-  }
+    if (err) {
+        return console.log('something bad happened', err)
+    }
 
-  console.log(`server is listening on ` + 3000)
+    console.log(`server is listening on ` + 3000)
 });
