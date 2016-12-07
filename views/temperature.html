@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to PiStat!</title>
-    <link rel="stylesheet" type="text/css" href="/public/css/homepage.css">
-    <script src="/node_modules/jquery/dist/jquery.js"></script>
-    <script src="/node_modules/jquery-knob/js/jquery.knob.js"></script>
-    <script src="/public/js/temp_observer.js"></script>
-    <script src="/public/js/environment.js"></script>
-    <script src="/public/js/simulator.js"></script>
-    <script src="/public/js/knob_logic.js"></script>
+    <link rel="stylesheet" type="text/css" href="/public/css/temperature.css">
 </head>
 <body>
 
@@ -21,8 +15,8 @@
 
         <div class="nav">
             <ul>
-                <li class="nav-button" id="temp-select"><span>Temperature</span></li>
-                <li class="nav-button" id="door-select"><span>Door</span></li>
+                <li class="nav-button"><a href="/views/temperature.html">Temperature</a></li>
+                <li class="nav-button"><a href="/views/door.html">Door</a></li>
             </ul>
         </div>
     </div>
@@ -33,14 +27,14 @@
         <!--- JQuery Knob html with inline css copied from Jquery demo --->
         <div class="demo" style="width:100%">
             <div style="width: 50%;float: left">
-                <p>Current Temperature:</p>
+                <p>Current Temperature</p>
                 <input class="cur_knob" data-width="80%" data-min="55" data-max="90" data-step="1"
                        data-displayPrevious=true
                        value="55">
 
             </div>
             <div style="width: 50%;float: right">
-                <p>Target Temperature:</p>
+                <p>Target Temperature</p>
                 <input class="des_knob" data-width="80%" data-min="55" data-max="90" data-step="1"
                        data-displayPrevious=true
                        value="55">
@@ -65,5 +59,12 @@
         </div>
     </div>
 </div>
+<link rel="stylesheet" type="text/css" href="/public/css/header.css">
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/jquery-knob/js/jquery.knob.js"></script>
+    <script src="/public/js/temp_observer.js"></script>
+    <script src="/public/js/environment.js"></script>
+    <script src="/public/js/simulator.js"></script>
+    <script src="/public/js/knob_logic.js"></script>
 </body>
 </html>

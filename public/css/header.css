@@ -8,6 +8,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     text-rendering: optimizelegibility;
+    overflow: hidden;
 }
 
 .container {
@@ -29,43 +30,28 @@ body {
     float: right;
 }
 
+.nav-button {
+    cursor: pointer;
+    list-style: none;
+    float: left;
+    margin: 20px;
+}
+
+.nav-button:hover {
+    text-shadow: 1px 0px 20px red;
+}
+
 .content-container {
     background: #2d2d2d;
     height: 100%;
     padding-top: 100px;
 }
 
-.content {
-    display: block;
-    margin: auto;
-    width: 75%;
-}
-
 .logo {
     float: left;
 }
 
-p {
-    font-size: 30px;
-    line-height: 30px;
-    color: #bfc0c1;
-}
-
-li {
-    list-style: none;
-    float: left;
-    margin: 20px;
-}
-
-#auxcontrols {
-    font-size: 20px;
-    line-height: 30px;
-    color: #bfc0c1;
-}
-
-.nav-button {
-    cursor: pointer;
-}
-.nav-button:hover {
-    text-shadow: 1px 0px 20px red;
+a {
+    color: black;
+    text-decoration: none;
 }

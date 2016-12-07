@@ -9,10 +9,11 @@ const app = express();
 
 app.use("/public", express.static('public'));
 app.use("/node_modules", express.static('node_modules'));
+app.use("/views", express.static('views'));
 
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/views/homepage.html'));
+    res.sendFile(path.join(__dirname + '/views/temperature.html'));
     //__dirname : It will resolve to your project folder.
 });
 

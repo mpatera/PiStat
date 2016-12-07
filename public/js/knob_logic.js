@@ -54,8 +54,6 @@ $(function ($) {
         }
 
     });
-});
-$(function ($) {
 
     $(".des_knob").knob({
         change: function (value) {
