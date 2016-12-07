@@ -27,19 +27,19 @@ temperature.prototype = {
         );
     },
 
-    increase: function(o, thisObj) {
+    increase: function(thisObj) {
         this.val += 1;
         var scope = thisObj || window;
-        this.handlers.forEach(function(item){
-            item.call(scope, o);
+        this.handlers.forEach(function(tmp_obs){
+            tmp_obs.call(scope, this.val);
         });
     },
 
-    decrease: function(o, thisObj) {
+    decrease: function(thisObj) {
         this.val -= 1;
         var scope = thisObj || window;
         this.handlers.forEach(function(item){
-            item.call(scope, o);
+            item.call(scope, this.val);
         });
     }
 };
