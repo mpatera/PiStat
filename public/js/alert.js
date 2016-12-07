@@ -16,10 +16,13 @@ const darr_number = '+12532788759';
 
 module.exports = {
     send_alarm_sms: function () {
+        var current_date = new Date();
         client.sendMessage({
-            to: darr_number,
+            to: matt_number,
             from: '+19254489396',
-            body: 'Your door has been opened while the alarm system is active!'
+            body: '\nYour door has been opened while the alarm system is active!\n' +
+                current_date.getHours() + ":" + current_date.getMinutes() + ":" +
+                current_date.getSeconds()
         });
         console.log("SMS sent");
     }
