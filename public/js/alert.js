@@ -1,8 +1,8 @@
 /**
  * Created by mattpatera on 12/6/16.
+ *
+ * Sends alert to phone/email that door has been opened
  */
-
-// Sends alert to phone/email that door has been opened
 
 var twilio = require('twilio');
 var nodemailer = require('nodemailer');
@@ -22,6 +22,7 @@ var text = '\nYour door has been opened while the alarm system is active!\n' +
 
 module.exports = {
     send_alarm_sms: function () {
+        // Function to send SMS message
         client.sendMessage({
             to: matt_number,
             from: '+19254489396',
@@ -31,6 +32,7 @@ module.exports = {
     },
 
     send_alarm_email: function () {
+        // Function to send email message
         var transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
@@ -41,7 +43,7 @@ module.exports = {
 
         var mailOptions = {
             from: 'dooralarmsystem837@gmail.com',
-            to: 'mattpatera1994@gmail.com',
+            to: 'mattpatera1994@gmail.com', // change this to change dest.
             subject: 'Door Alarm',
             text: text
         };
