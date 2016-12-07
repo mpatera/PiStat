@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Welcome to PiStat!</title>
     <link rel="stylesheet" type="text/css" href="/public/css/temperature.css">
+    <link rel="stylesheet" href="/public/css/jquery.switchbutton.css">
 </head>
 <body>
 
@@ -48,11 +49,7 @@
 
 
             <div id='auxcontrols'>
-                <label id="climatestate"><span>Climate State: Heating</span></label><br>
-                <Label id="doorlabel"><span>Door: Closed</span></Label><br>
-                <Label id="tvlabel"><span>Television: Off</span></Label><br>
-                <Label id="ovenlabel"><span>Oven: Off</span></Label><br>
-                <Label id="microwavelabel"><span>microwave: Off</span></Label><br>
+                <label id="climatestate"><span>Climate State: Off</span></label><br>
             </div>
 
 
@@ -66,5 +63,7 @@
 <script src="/public/js/temp_observer.js"></script>
 <script src="/public/js/simulator.js"></script>
 <script src="/public/js/knob_logic.js"></script>
+<script src="/public/js/door_sensor/door_main.js"></script>
+
 </body>
 </html>

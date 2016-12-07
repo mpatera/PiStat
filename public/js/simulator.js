@@ -12,6 +12,7 @@ temp.subscribe(temp_observer);
 
 function adjust_temp(dtmp){
     console.log("current temp : "+ctmp+" desired temp : "+dtmp);
+
     if(dtmp < ctmp){
         console.log("entering cooling loop");
         cool_loop(dtmp);
@@ -24,6 +25,7 @@ function adjust_temp(dtmp){
 
 function heat_loop(dtmp){    //will keep calling itself until val = temp
     console.log("increasing temp..");
+    document.getElementById('climatestate').innerHTML = 'Climate State: Heating';
     temp.increase();
     if (dtmp > ctmp){
         console.log("waiting 10s before next increase..");
@@ -32,12 +34,15 @@ function heat_loop(dtmp){    //will keep calling itself until val = temp
 }
 function cool_loop(dtmp){    //will keep calling itself until val = temp
     console.log("decreasing temp..");
+    document.getElementById('climatestate').innerHTML = 'Climate State: Cooling';
     temp.decrease();
     if (dtmp < ctmp){
         console.log("waiting 10s before next decrease..");
         setTimeout(cool_loop(dtmp), 10000 );
     }
 }
+
+
 
 
 
