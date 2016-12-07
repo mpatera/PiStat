@@ -7,7 +7,7 @@ var door = (function () {
 
     function act () {
         if (isOpen && sec_system.isSystemArmed()) {
-            //alert.send_alarm_sms();
+            $.get("http://localhost:3000/alert");
             console.log("alert here");
         }
     }
