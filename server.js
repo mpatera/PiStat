@@ -12,7 +12,7 @@ app.use("/node_modules", express.static('node_modules'));
 
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/views/index.html'));
+    res.sendFile(path.join(__dirname + '/views/homepage.html'));
     //__dirname : It will resolve to your project folder.
 });
 
