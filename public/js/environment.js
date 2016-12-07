@@ -32,6 +32,7 @@ temperature.prototype = {
 
     increase: function(thisObj) {
         console.log("increasing temp object");
+        document.getElementById('climatestate').innerHTML = 'Climate State: Heating';
         ctmp += 1;
         var scope = thisObj || window;
         this.handlers.forEach(function(tmp_obs){
@@ -42,6 +43,7 @@ temperature.prototype = {
 
     decrease: function(thisObj) {
         console.log("decreasing temp object");
+        document.getElementById('climatestate').innerHTML = 'Climate State: Cooling';
         ctmp -= 1;
         var scope = thisObj || window;
         this.handlers.forEach(function(item){
