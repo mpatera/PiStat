@@ -69,8 +69,12 @@ var sec_system = (function () {
     // PUBLIC FUNCTIONS
     return {
         system_mod: function () {
-            isArmed = !isArmed;
-            changeIcon();
+            if (!isArmed && door.isDoorOpen()) { // door is open and attempt made to arm
+                alert("Please close your door, then try to arm the system.");
+            } else {
+                isArmed = !isArmed;
+                changeIcon();
+            }
         },
 
         isSystemArmed: function () {
