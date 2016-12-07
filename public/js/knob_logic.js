@@ -65,12 +65,7 @@ $(function ($) {
             //console.log(this.$.attr('value'));
             console.log("release : " + value);
 
-            if(value < temp.val()){
-                cool_loop(value);
-            }
-            if(value > temp.val()){
-                heat_loop(value);
-            }
+            adjust_temp(value);
         },
         cancel: function () {
             console.log("cancel : ", this);
