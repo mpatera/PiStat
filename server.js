@@ -19,8 +19,8 @@ app.get('/', function (req, res) {
 });
 
 // Requires for the messaging system
-const alert_tool_sms = require('./public/js/alert.js');
-const alert_tool_email = require('./public/js/alert.js');
+const alert_tool_sms = require('./public/js/door_sensor/alert.js');
+const alert_tool_email = require('./public/js/door_sensor/alert.js');
 
 // Chain of command routes
 app.get('/alertSMS', function (req, res) {
