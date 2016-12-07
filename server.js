@@ -18,10 +18,15 @@ app.get('/', function (req, res) {
     //__dirname : It will resolve to your project folder.
 });
 
-const alert_tool = require('./public/js/alert.js');
+const alert_tool_sms = require('./public/js/alert.js');
+const alert_tool_email = require('./public/js/alert.js');
 
-app.get('/alert', function (req, res) {
-    res.send(alert_tool.send_alarm_sms());
+app.get('/alertSMS', function (req, res) {
+    res.send(alert_tool_sms.send_alarm_sms());
+});
+
+app.get('/alertEmail', function (req, res) {
+    res.send(alert_tool_email.send_alarm_email());
 });
 
 app.listen(3000, '0.0.0.0', (err) => {

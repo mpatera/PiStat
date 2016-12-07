@@ -5,10 +5,26 @@
 var door = (function () {
     var isOpen = false;
 
-    function act () {
+    function makeRequest(attempt = 1) {
+        if (attempt == 1) {
+            var getURL = 'http://localhost:3000/alertSMS';
+            var service = 'SMS';
+        } else if (attempt == 2) {
+            var getURL = 'http://localhost:3000/alertEmail';
+            var service = 'Email';
+        }
+
+        $.get(getURL, '', function () {
+            console.log(service + " sent")
+        }).fail(function () {
+            console.log("Request " + attempt + " has failed.");
+            makeRequest(attempt + 1);
+        });
+    }
+
+    function act() {
         if (isOpen && sec_system.isSystemArmed()) {
-            $.get("http://localhost:3000/alert");
-            console.log("alert here");
+            makeRequest();
         }
     }
 

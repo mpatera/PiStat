@@ -25,6 +25,7 @@
     "jquery": "^3.1.1",
     "jquery-knob": "^1.2.11",
     "mocha": "^3.2.0",
+    "nodemailer": "^2.6.4",
     "nodemon": "^1.11.0",
     "twilio": "^2.11.1"
   }
