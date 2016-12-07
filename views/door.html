@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Welcome to PiStat!</title>
     <link rel="stylesheet" type="text/css" href="/public/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/door.css">
 </head>
 <body>
 <div class="header">
@@ -16,12 +17,20 @@
             <ul>
                 <li class="nav-button"><a href="/views/temperature.html">Temperature</a></li>
                 <li class="nav-button"><a href="/views/door.html">Door</a></li>
+                <li class="nav-button" id="open_close_door">OPEN/CLOSE</li>
             </ul>
         </div>
     </div>
 </div>
 <div class="content-container">
-
+    <div class="content">
+        <div class="status">
+            <img src="/public/assets/images/Standby.png">
+        </div>
+        <button class="toggle">TOGGLE</button>
+    </div>
 </div>
+<script src="/node_modules/jquery/dist/jquery.js"></script>
+<script src="/public/js/door_main.js"></script>
 </body>
 </html>
