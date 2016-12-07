@@ -5,6 +5,9 @@
 
 //create temp object
     //attach sensor 'observers'
+
+var ctmp = 55;
+
 function temperature() {
     this.handlers = []; // observer
 
@@ -12,7 +15,6 @@ function temperature() {
 
 temperature.prototype = {
 
-    val: 55,
 
     subscribe: function(fn) {
         this.handlers.push(fn);
@@ -30,21 +32,21 @@ temperature.prototype = {
 
     increase: function(thisObj) {
         console.log("increasing temp object");
-        this.val += 1;
+        ctmp += 1;
         var scope = thisObj || window;
         this.handlers.forEach(function(tmp_obs){
-            console.log("triggering temp observer");
-            tmp_obs.call(scope, this.val);
+            console.log("triggering temp observer to "+ctmp);
+            tmp_obs.call(scope, ctmp);
         });
     },
 
     decrease: function(thisObj) {
         console.log("decreasing temp object");
-        this.val -= 1;
+        ctmp -= 1;
         var scope = thisObj || window;
         this.handlers.forEach(function(item){
             console.log("triggering temp observer (decrease)");
-            item.call(scope, this.val);
+            item.call(scope, ctmp);
         });
     }
 };

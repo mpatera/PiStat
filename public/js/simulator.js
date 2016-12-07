@@ -10,32 +10,32 @@ var temp = new temperature();
 
 temp.subscribe(temp_observer);
 
-function adjust_temp(val){
-    console.log("current temp : "+temp.val);
-    if(val < temp.val){
+function adjust_temp(dtmp){
+    console.log("current temp : "+ctmp+" desired temp : "+dtmp);
+    if(dtmp < ctmp){
         console.log("entering cooling loop");
-        cool_loop(val);
+        cool_loop(dtmp);
     }
-    if(val > temp.val){
+    if(dtmp > ctmp){
         console.log("entering heating loop");
-        heat_loop(val);
+        heat_loop(dtmp);
     }
 }
 
-function heat_loop(val){    //will keep calling itself until val = temp
+function heat_loop(dtmp){    //will keep calling itself until val = temp
     console.log("increasing temp..");
     temp.increase();
-    if (val > temp.val){
+    if (dtmp > ctmp){
         console.log("waiting 10s before next increase..");
-        setTimeout(heat_loop(val), 10000 );
+        setTimeout(heat_loop(dtmp), 10000 );
     }
 }
-function cool_loop(val){    //will keep calling itself until val = temp
+function cool_loop(dtmp){    //will keep calling itself until val = temp
     console.log("decreasing temp..");
     temp.decrease();
-    if (val < temp.val){
+    if (dtmp < ctmp){
         console.log("waiting 10s before next decrease..");
-        setTimeout(cool_loop(val), 10000 );
+        setTimeout(cool_loop(dtmp), 10000 );
     }
 }
 

@@ -1,6 +1,8 @@
 /**
  * Created by mattpatera on 12/6/16.
  */
+
+
 $(function ($) {
 
     $(".cur_knob").knob({
@@ -62,7 +64,6 @@ $(function ($) {
         release: function (value) {
             //console.log(this.$.attr('value'));
             console.log("release : " + value);
-
             adjust_temp(value);
         },
         cancel: function () {
