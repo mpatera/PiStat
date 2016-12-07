@@ -18,7 +18,7 @@ const darr_number = '+12532788759';
 var current_date = new Date();
 var text = '\nYour door has been opened while the alarm system is active!\n' +
     current_date.getHours() + ":" + current_date.getMinutes() + ":" +
-    current_date.getSeconds()
+    current_date.getSeconds();
 
 module.exports = {
     send_alarm_sms: function () {
