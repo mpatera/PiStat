@@ -4,7 +4,7 @@
 ##To Install and use</h2>
 ###Linux</h3>
 <p>Download Node.js and NPM.</p>
-sudo apt-get install nodejs
+`sudo apt-get install nodejs`
     
 
 ##Useful Links</h2>
