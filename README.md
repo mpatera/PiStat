@@ -10,6 +10,7 @@
 * Navigate to the PiStat directory and run: `npm install`
 * Run: `npm start`
 * Navigate to 'localhost:3000' in your browser.
+
 ### MacOS
 * Install Homebrew:
     * `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -19,6 +20,7 @@
 * Navigate to the PiStat directory and run: `npm install`
 * Run: `npm start`
 * Navigate to 'localhost:3000' in your browser.
+
 ### If you HAVE to use Windows....
 * Download NodeJS from<a href="https://nodejs.org/en/download/">here</a>and install.
 * Restart your computer.
