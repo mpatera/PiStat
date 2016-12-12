@@ -1,10 +1,17 @@
 # PiStat
 <b>Raspberry Pi controlling a thermostat</b>
 
-##To Install and use</h2>
+##To Install and Use</h2>
 ###Linux</h3>
-<p>Download Node.js and NPM.</p>
-`sudo apt-get install nodejs`
+* Download and install Node.js and NPM: 
+    * `sudo apt-get install nodejs`
+    * `sudo apt-get install -y build-essential`
+* Clone PiStat to your machine.
+* Navigate to the PiStat directory and run: `npm install`
+* Run: `npm start`
+* Navigate to 'localhost:3000' in your browser.
+###MacOS
+* 
     
 
 ##Useful Links</h2>
