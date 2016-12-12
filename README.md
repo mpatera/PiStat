@@ -22,7 +22,7 @@
 * Navigate to 'localhost:3000' in your browser.
 
 ### If you HAVE to use Windows....
-* Download NodeJS from<a href="https://nodejs.org/en/download/">here</a>and install.
+* Download NodeJS from <a href="https://nodejs.org/en/download/">here</a> and install.
 * Restart your computer.
 * Test installations with:
     * `node -v`
