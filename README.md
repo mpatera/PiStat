@@ -32,8 +32,7 @@
 * Run: `npm start`
 * Navigate to 'localhost:3000' in your browser.
 
-
-##Useful Links</h2>
+### Useful Links
 <ul>
 <li><a href="https://trello.com/b/KgPqsjKo">PiStat Trello Board</a><br></li>
 <li><a href="https://google.github.io/styleguide/pyguide.html">Style guide for python</a></li>
