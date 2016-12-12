@@ -27,7 +27,7 @@
 * Test installations with:
     * `node -v`
     * `npm -v`
-*Clone PiStat to your machine.
+* Clone PiStat to your machine.
 * Navigate to the PiStat directory and run: `npm install`
 * Run: `npm start`
 * Navigate to 'localhost:3000' in your browser.
